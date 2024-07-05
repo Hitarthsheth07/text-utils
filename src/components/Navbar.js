@@ -8,7 +8,7 @@ export default function Navbar(props) {
         className={`navbar navbar-expand-lg navbar-${props.theme} bg-${props.theme}`}
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand" href="/" style={props.style}>
             {props.title}
           </a>
           <button
@@ -25,12 +25,12 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <a className="nav-link active" aria-current="page" href="/" style={props.style}>
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/" style={props.style}>
                   {props.aboutText}
                 </a>
               </li>
@@ -74,6 +74,7 @@ export default function Navbar(props) {
               <label
                 className={`form-check-label text-${props.textColor}`}
                 htmlFor="flexSwitchCheckDefault"
+                style={props.style}
               >
                 Change Theme
               </label>

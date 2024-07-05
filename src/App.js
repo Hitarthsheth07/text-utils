@@ -14,6 +14,8 @@ function App() {
   function toggleTheme() {
     setTheme("light");
     setTextColor('dark')
+    setStyle(() => null)
+    document.body.style.backgroundColor = 'white'
 
     if (theme === "light") {
       setTheme("dark");
@@ -36,9 +38,10 @@ function App() {
     
     if (styleName === "yellow") {
 
-      if (document.body.style.backgroundColor === "#051014") {
+      if (document.body.style.backgroundColor === "rgb(5, 16, 20)") {
         setStyle(() => null);
         setTheme("light");
+        document.body.style.backgroundColor = "white";
       }
       
       else {
@@ -71,6 +74,7 @@ function App() {
         text={textColor}
         toggleTheme={toggleTheme}
         changeStyle={changeStyle}
+        style={style}
       />
 
       <Alert alert={alert} />
